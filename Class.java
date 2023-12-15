@@ -103,7 +103,7 @@ public class Class
         
         
         //print the information 
-        System.out.println("--------------------");
+        /*System.out.println("--------------------");
         System.out.println("|   ID   |   Mark   |");
         System.out.println("--------------------");
         for(int i = 0; i < classList.size(); i++)
@@ -113,9 +113,21 @@ public class Class
             
             System.out.println("|   " + studentID + "   |   " + mark + "   |");
             System.out.println("--------------------");
-        }
+        }*/
         
-        Utility.printSpace();
+        //formatter
+        Formatter fmt = new Formatter();  
+        fmt.format("%15s %15s\n", "ID", "Mark");
+        for(int i = 0; i < classList.size(); i++)
+        {
+            String studentID = classList.get(i).studentID;
+            int mark = classList.get(i).getMark();
+            
+            fmt.format("%14s %14s \n", studentID, mark);
+        }
+        System.out.println(fmt); 
+        
+        //Utility.printSpace();
     }
     
     //-----------------move to manager-----------------

@@ -77,7 +77,6 @@ public class Utility
     }
     
     //make a mapping count function ex: 1-> first, 2 -> second, ... take in integer return count as string
-    
     public static String getString(String prompt)
     {
         //Variable declarations 
@@ -96,5 +95,10 @@ public class Utility
     public static void printSpace()
     {
         System.out.println("");
+    }
+    
+    public static void drawTable()
+    {
+    
     }
 }

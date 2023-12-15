@@ -43,7 +43,6 @@ public class Student
     }
 }
 
-
 class SortByMark implements Comparator<Student> {
     
     // Sorting in ascending order of marks
