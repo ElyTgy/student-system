@@ -1,7 +1,7 @@
-import java.util.Scanner;
+import java.util.*;
 
 
-//TODO: wrapper function for print to automatically print a space after each statement
+
 /**
  * Write a description of class Helper here.
  *
@@ -77,15 +77,27 @@ public class Utility
     }
     
     //make a mapping count function ex: 1-> first, 2 -> second, ... take in integer return count as string
-    public static String getString(String prompt)
+    public static String getString(String prompt, String lengthErrorMessage)
     {
-        //Variable declarations 
-        String input;
+        //Variable declarations
+        String input = "";
+        Boolean runLoop = true;
         Scanner inputScanner = new Scanner(System.in);
         
         System.out.print(prompt);
         
-        input = inputScanner.nextLine();        
+        
+        while (runLoop){
+            try{
+                input = inputScanner.nextLine();
+                if (input.length() >= 18){throw new ArithmeticException();}
+            }catch(ArithmeticException arithmeticException){
+                System.out.print(lengthErrorMessage);
+                continue;
+            }
+            runLoop = false;
+        }//END of while loop     
+        
         
         inputScanner.close();
         return input;
@@ -95,10 +107,5 @@ public class Utility
     public static void printSpace()
     {
         System.out.println("");
-    }
-    
-    public static void drawTable()
-    {
-    
     }
 }

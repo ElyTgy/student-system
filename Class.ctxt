@@ -1,0 +1,26 @@
+#BlueJ class context
+comment0.target=Class
+comment0.text=\r\n\ DONE\:\ add\ students\r\n\ DONE\:\ remove\ students\ (by\ ID)\r\n\ DONE\:\ provide\ student\ info\ (search\ by\ ID)\r\n\ DONE\:\ show\ class\ info\ (all\ student\ ids,\ marks\ in\ class,\ mean\ and\ stuff)\ +\ allow\ user\ to\ view\ in\ ascending\ or\ descending\ order\ of\ marks\r\n\ //TODO\:\ if\ csv\ file\ is\ allowed,\ have\ mean,\ min,\ and\ max\ as\ instance\ variables\ and\ change\ them\ whenever\ remove\ student\ or\ addstudent\ is\ called.\ DONE\:\ show\ specific\ class\ info\ (mean,\ max,\ min)\r\n\ \ \ \ TODO\:\ dont\ allow\ for\ duplicate\ IDs\r\n\ \ \ \ DONE\:\ allow\ for\ user\ to\ quit\ while\ entering\ students\r\n\ \ \ \r\n
+comment1.params=
+comment1.target=Class()
+comment10.params=string
+comment10.target=java.lang.Boolean\ checkQuit(java.lang.String)
+comment11.params=
+comment11.target=void\ main()
+comment2.params=newStudent
+comment2.target=void\ addStudent(Student)
+comment3.params=studentID
+comment3.target=void\ removeStudent(java.lang.String)
+comment4.params=studentID
+comment4.target=void\ showStudentByID(java.lang.String)
+comment5.params=
+comment5.target=void\ showMean()
+comment6.params=
+comment6.target=void\ showMin()
+comment7.params=
+comment7.target=void\ showMax()
+comment8.params=ascending
+comment8.target=void\ showClass(java.lang.Boolean)
+comment9.params=classList
+comment9.target=void\ drawTable(java.util.ArrayList)
+numComments=12

@@ -100,34 +100,24 @@ public class Class
             Collections.reverse(classList);
         }
         
-        
-        
-        //print the information 
-        /*System.out.println("--------------------");
-        System.out.println("|   ID   |   Mark   |");
-        System.out.println("--------------------");
-        for(int i = 0; i < classList.size(); i++)
-        {
-            String studentID = classList.get(i).studentID;
-            int mark = classList.get(i).getMark();
-            
-            System.out.println("|   " + studentID + "   |   " + mark + "   |");
-            System.out.println("--------------------");
-        }*/
-        
-        //formatter
+        drawTable(classList);
+    }
+    
+    private void drawTable(ArrayList<Student> classList)
+    {
         Formatter fmt = new Formatter();  
-        fmt.format("%15s %15s\n", "ID", "Mark");
+        
+        fmt.format("%-21s %-21s %n", "ID", "Mark");
         for(int i = 0; i < classList.size(); i++)
         {
             String studentID = classList.get(i).studentID;
             int mark = classList.get(i).getMark();
             
-            fmt.format("%14s %14s \n", studentID, mark);
+            fmt.format("%-20s %-20s \n", studentID, mark);
         }
-        System.out.println(fmt); 
+        System.out.println(fmt);
         
-        //Utility.printSpace();
+        Utility.printSpace();
     }
     
     //-----------------move to manager-----------------
@@ -149,7 +139,7 @@ public class Class
     
         for(int i = 0; i < studentCount; i++)
         {
-            String studentID = Utility.getString("Please enter the student's ID: ");
+            String studentID = Utility.getString("Please enter the student's ID: ", "The ID can't be longer than 20 character, please try again: ");
             if(checkQuit(studentID)){break;}
             int mark = Utility.getPercentage("Please enter the student's mark for this class: ", "Please enter an integer (round up the percetange if it is has decimals): ");
             Student newStudent = new Student(studentID, mark);
@@ -161,7 +151,6 @@ public class Class
         showMean();
         showMax();
         showClass(true);
-        showClass(false);
     }
 }
 
@@ -173,5 +162,17 @@ public class Class
  * Having different classes also allows easier further modification of the program if we wanted to make a system with mutliple classes or having an a parent class with child classes of different types
  * 
  * 
- * Test Code
+ * Test Code:
+ * //print the information 
+        System.out.println("--------------------");
+        System.out.println("|   ID   |   Mark   |");
+        System.out.println("--------------------");
+        for(int i = 0; i < classList.size(); i++)
+        {
+            String studentID = classList.get(i).studentID;
+            int mark = classList.get(i).getMark();
+            
+            System.out.println("|   " + studentID + "   |   " + mark + "   |");
+            System.out.println("--------------------");
+        }
 */
