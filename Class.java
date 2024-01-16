@@ -42,6 +42,20 @@ public class Class
         Utility.printSpace();
     }
     
+    public void modifyStudent(String studentID, int newMark)
+    {
+        for(int i = 0; i < classList.size(); i++)
+        {
+            if(studentID.equals(classList.get(i).studentID))
+            {
+                Student updatedStudent = new Student(studentID, newMark);
+                classList.set(i, updatedStudent);
+            }
+        }
+        System.out.println("Mark of student with ID " + studentID + " updated to " + newMark);
+        Utility.printSpace();
+    }
+    
     public void showStudentByID(String studentID)
     {
         Boolean found = false;
@@ -100,10 +114,10 @@ public class Class
             Collections.reverse(classList);
         }
         
-        drawTable(classList);
+        drawTable();
     }
     
-    private void drawTable(ArrayList<Student> classList)
+    private void drawTable()
     {
         Formatter fmt = new Formatter();  
         
@@ -129,28 +143,54 @@ public class Class
     
     public void main()
     {
-        //clear screen
-        System.out.flush();
-        System.out.print("\f");
+        int studentCount;
+        String userInput;
         
-        int studentCount = Utility.getNumber("How many students do you have in your class? ", "The number you entered was too long. Please try again: ", "Please enter an integer: ");
+        Utility.clearScreen();
+        
+        studentCount = Utility.getNumber("How many students do you have in your class? ", "The number you entered was too long. Please try again: ", "Please enter an integer: ");
         System.out.println("If you want to stop entering students, type q or quit");
         Utility.printSpace();
     
         for(int i = 0; i < studentCount; i++)
         {
             String studentID = Utility.getString("Please enter the student's ID: ", "The ID can't be longer than 20 character, please try again: ");
-            if(checkQuit(studentID)){break;}
+            if(studentID.toLowerCase().equals("quit") || studentID.toLowerCase().equals("q")){break;}
+            
             int mark = Utility.getPercentage("Please enter the student's mark for this class: ", "Please enter an integer (round up the percetange if it is has decimals): ");
             Student newStudent = new Student(studentID, mark);
             addStudent(newStudent);
         }
         
-        removeStudent("7");
-        showStudentByID("1");
-        showMean();
-        showMax();
-        showClass(true);
+        System.out.println("The data you entered can be viewed and modified in a number of ways. Please select your operation from the menu below.");
+        UI.showMenu();
+        
+        while (true)
+        {
+            userInput = (Utility.getString("Please enter you command: ", "Your input was too long, please enter something shorter")).toLowerCase();
+            
+            
+            if ((userInput.equals("1")) || (userInput.equals("add")) || (userInput.equals("add a student")) || (userInput.equals("add student"))){
+                addStudent();
+            }else if ((userInput.equals("2")) || (userInput.equals("remove")) || (userInput.equals("remove a student")) || ( userInput.equals("remove student"))){
+                removeStudent();
+            }else if ((userInput.equals("3")) || (userInput.equals("modify")) || (userInput.equals("modify a mark")) || (userInput.equals("modify mark"))){
+                modifyStudent();
+            }else if ((userInput.equals("4")) || (userInput.equals("find")) || (userInput.equals("find student")) || (userInput.equals("find by id"))){
+                showStudentByID();                
+            }else if ((userInput.equals("5")) || (userInput.equals("average"))){
+                showMean();
+            }else if ((userInput.equals("6")) || (userInput.equals("min")) || (userInput.equals("minimum"))){
+                showMin();
+            }else if ((userInput.equals("7")) || (userInput.equals("max")) || (userInput.equals("maximum"))){
+                showMax();
+            }else if ((userInput.equals("8")) || (userInput.equals("class")) || (userInput.equals("get information for the whole class"))){
+                drawTable();
+            }else if ((userInput.equals("9")) || (userInput.equals("quit"))){
+                UI.showBye();
+                System.exit(0);
+            }
+        }
     }
 }
 
@@ -160,6 +200,16 @@ public class Class
  * Notes:
  * Reflections for portfolio posts: Having UI/UX in a sepeate class makes it easier to expand and modify the program later
  * Having different classes also allows easier further modification of the program if we wanted to make a system with mutliple classes or having an a parent class with child classes of different types
+ * 
+ *      System.out.println("1) Add a student");
+        System.out.println("2) Remove a student");
+        System.out.println("3) Modify a mark");
+        System.out.println("4) Find a student by ID");
+        System.out.println("5) Average mark for class");
+        System.out.println("6) Minimum mark for class");
+        System.out.println("7) Maxmimum mark for class");
+        System.out.println("8) Get Information for the whole class");
+        System.out.println("9) Quit");
  * 
  * 
  * Test Code:
@@ -175,4 +225,57 @@ public class Class
             System.out.println("|   " + studentID + "   |   " + mark + "   |");
             System.out.println("--------------------");
         }
+        
+        
+public void addStudent(Student newStudent)
+    {
+        classList.add(newStudent);
+        System.out.println("New student added.");
+        Utility.printSpace();
+    }
+    
+    public void removeStudent(String studentID)
+    {
+        //TODO: replace ArrayList with Hashmap for more efficient search (remove forloop and use .get()) o use binary search
+        for(int i = 0; i < classList.size(); i++)
+        {
+            if(studentID.equals(classList.get(i).studentID))
+            {
+                classList.remove(i);
+            }
+        }
+        System.out.println("Student removed.");
+        Utility.printSpace();
+    }
+    
+    public void modifyStudent(String studentID, int newMark)
+    {
+        for(int i = 0; i < classList.size(); i++)
+        {
+            if(studentID.equals(classList.get(i).studentID))
+            {
+                Student updatedStudent = new Student(studentID, newMark);
+                classList.set(i, updatedStudent);
+            }
+        }
+        System.out.println("Mark of student with ID " + studentID + " updated to " + newMark);
+        Utility.printSpace();
+    }
+    
+    public void showStudentByID(String studentID)
+    {
+        Boolean found = false;
+        for(int i = 0; i < classList.size(); i++)
+        {
+            if(studentID.equals(classList.get(i).studentID))
+            {
+                System.out.println(classList.get(i).toString());
+                found = true;
+            }
+        }
+        
+        if(!found){System.out.println("Sorry, no student with that ID was found.");}
+        
+        Utility.printSpace();
+    }   
 */

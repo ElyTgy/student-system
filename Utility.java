@@ -108,4 +108,10 @@ public class Utility
     {
         System.out.println("");
     }
+    
+    public static void clearScreen()
+    {
+        System.out.flush();
+        System.out.print("\f");
+    }
 }
