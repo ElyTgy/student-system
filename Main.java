@@ -1,25 +1,28 @@
-
 /**
- * Write a description of class Main here.
+ *Title: Class Manager
+ * 
+ * Program Summary:
+ * 
+ * Program Element List:
  *
- * @author (your name)
- * @version (a version number or a date)
+ * @author Ellie Taghavi
+ * @version January 17th, 2023
  */
 public class Main
 {
-    // instance variables - replace the example below with your own
-    private int x;
-
     /**
-     * Constructor for objects of class Main
+     * Summary: Constructor for Main class
+     * @params: None
+     * @return: None
      */
     public Main()
     {
-        // initialise instance variables
-        x = 0;
+        // None
     }
 
-    
+    /**
+     * Summary: entry point for the program
+     */
     public static void main (String[] args)
     {
          Class classOne = new Class();

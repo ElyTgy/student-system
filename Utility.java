@@ -2,14 +2,13 @@ import java.util.*;
 
 
 
-/**
- * Write a description of class Helper here.
- *
- * @author (your name)
- * @version (a version number or a date)
- */
 public class Utility
 {
+    /**
+     * Summary: Constructor for Utility class
+     * @params: None
+     * @return: None
+     */
     public Utility()
     {
         //None
