@@ -12,8 +12,20 @@ public class Utility
     public Utility()
     {
         //None
-    }
+    }//END of Utility constructor
 
+    
+    
+    
+    
+    /**
+     * Summary: get a number from the user that meets certain conditions
+     * @params: 
+     *          prompt[String]: Prompt to be printed to the user that asks for their input
+     *          lengthErrorMessage[String]: Error to be printed when the number is too long (more than 10 digits)
+     *          formatErrorMessage[String]: Error to be printed when the input is not an integer     
+     * @reutrn: [int] the loop will keep running and asking for input until a valid number is entered
+     */
     public static int getNumber(String prompt, String lengthErrorMessage, String formatErrorMessage)
     {
         //Variable declarations 
@@ -44,6 +56,15 @@ public class Utility
         return number;
     }//END of getNumber
     
+    
+    
+    
+    
+    /**
+     * Summary: get a number that is a percentage from the user
+     * @params: prompt[String]: Prompt to be printed to the user that asks for their input
+     * @reutrn: [int] the loop will keep running and asking for input until a valid percentage is entered
+     */
     public static int getPercentage(String prompt)
     {
         //Variable declarations 
@@ -73,9 +94,19 @@ public class Utility
         
         inputScanner.close();
         return number;
-    }
+    }//END of getPercentage
     
-    //make a mapping count function ex: 1-> first, 2 -> second, ... take in integer return count as string
+    
+    
+    
+    
+    /**
+     * @Summary: get a valid string from the user
+     * @params: 
+     *          prompt[String]: the prompt to be printed to the screen that asks user for input          
+     *          lengthErrorMessage[String]: Error messege to let user know the string they entered is too long
+     * @return:None
+     */
     public static String getString(String prompt, String lengthErrorMessage)
     {
         //Variable declarations
@@ -100,17 +131,34 @@ public class Utility
         
         inputScanner.close();
         return input;
-    }
+    }//END of getString
     
-    //wrapper function for printing printSpace
+    
+    
+    
+    
+    /**
+     * @Summary: a wrapper function for printing a blank line
+     * @params: None
+     * @return:None
+     */
     public static void printSpace()
     {
         System.out.println("");
-    }
+    }//END of printSpace
     
+    
+    
+    
+    
+    /**
+     * @Summary: a wrapper function for printing a blank line
+     * @params: None
+     * @return:None
+     */
     public static void clearScreen()
     {
         System.out.flush();
         System.out.print("\f");
-    }
-}
+    }//END of clearScreen
+}//END of Utility class
