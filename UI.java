@@ -5,6 +5,8 @@
  * @author (your name)
  * @version (a version number or a date)
  */
+
+//TODO: move to the class class
 public class UI
 {
     public static void showMenu()

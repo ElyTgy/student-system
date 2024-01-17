@@ -45,7 +45,7 @@ public class Utility
         return number;
     }//END of getNumber
     
-    public static int getPercentage(String prompt, String formatErrorMessage)
+    public static int getPercentage(String prompt)
     {
         //Variable declarations 
         boolean runLoop = true;
@@ -66,7 +66,7 @@ public class Utility
                     continue;
                 }
             }catch(NumberFormatException numberFormatException){
-                System.out.print(formatErrorMessage);
+                System.out.print("Please enter an integer (round up the percetange if it is has decimals): ");
                 continue;
             }
             runLoop = false;
