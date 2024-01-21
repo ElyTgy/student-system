@@ -1,5 +1,10 @@
 public class UI
 {
+    /**
+     * Summary: shows the title to the user
+     * @param: None
+     * @return: None
+     */
     public static void showTitle()
     {
         System.out.println(" ____  _____  _     ____  _____ _      _____    _      ____  _      ____  _____ _____ ____ ");
@@ -8,15 +13,33 @@ public class UI
         System.out.println("\\___ |  | |  | \\_/|| |_/||  /_ | | \\||  | |    | |  ||| |-||| | \\||| |-||| |_//|  /_ |    /");
         System.out.println("\\____/  \\_/  \\____/\\____/\\____\\\\_/  \\|  \\_/    \\_/  \\|\\_/ \\|\\_/  \\|\\_/ \\|\\____\\\\____\\\\_/\\_\\");
                                                                                            
-    }
+    }//END of showTitle
     
+    
+    
+    
+    
+    /**
+     * Summary: shows intro message to user
+     * @param: None
+     * @return: None
+     */
     public static void showIntro()
     {
         System.out.println("Welcome to the new student manager system.");
         System.out.println("With the help of our program, you will be able to track all of your students as well as their marks.");
         System.out.println("Let's get started by entering the names of your students as well as their marks.");
-    }
+    }//END of showIntro
     
+    
+    
+    
+    
+    /**
+     * Summary: show menu to user
+     * @param: None
+     * @return: None
+     */
     public static void showMenu()
     {
         System.out.println("1) Add a student");
@@ -28,9 +51,17 @@ public class UI
         System.out.println("7) Maxmimum mark for class");
         System.out.println("8) Get Information for the whole class");
         System.out.println("9) Quit");
-    }
+    }//END of showMenu
     
-
+    
+    
+    
+    
+    /**
+     * Summary: show goodbye message to user
+     * @param: None
+     * @return: None
+     */
     public static void showBye()
     {
          System.out.println(" ____ ___  _ _____ _ ");
@@ -38,5 +69,5 @@ public class UI
         System.out.println("| | // \\  / |  \\  | |");
         System.out.println("| |_\\  / /  |  /_ \\_/");
         System.out.println("\\____//_/   \\____\\(_)");
-    }
-}
+    }//END of showBye
+}//END of UI
