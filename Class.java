@@ -306,6 +306,15 @@ public class Class
         
         Utility.clearScreen();
         
+        UI.showTitle();
+        Utility.printSpace();
+        Utility.printSpace();
+        
+        UI.showIntro();
+        Utility.printSpace();
+        
+        
+        
         studentCount = Utility.getNumber("How many students do you have in your class? ", "The number you entered was too long. Please try again: ", "Please enter an integer: ");
         System.out.println("If you want to stop entering students, type q or quit");
         Utility.printSpace();
@@ -334,6 +343,7 @@ public class Class
         
         
         
+        Utility.clearScreen();
         System.out.println("The data you entered can be viewed and modified in a number of ways. Please select your operation from the menu below.");
         Utility.printSpace();
         
@@ -350,7 +360,7 @@ public class Class
             }else if ((userInput.equals("3")) || (userInput.equals("modify")) || (userInput.equals("modify a mark")) || (userInput.equals("modify mark"))){
                 modifyStudent();
             }else if ((userInput.equals("4")) || (userInput.equals("find")) || (userInput.equals("find student")) || (userInput.equals("find by id"))){
-                showStudentByID();                
+                showStudentByID();
             }else if ((userInput.equals("5")) || (userInput.equals("average"))){
                 showMean();
             }else if ((userInput.equals("6")) || (userInput.equals("min")) || (userInput.equals("minimum"))){
@@ -364,6 +374,7 @@ public class Class
                 System.exit(0);
             }else{
                 System.out.println("Sorry, that command is not recognized. Please try again.");
+                Utility.printSpace();
             }//END of if-else
         }//END of while loop
     }//END of main

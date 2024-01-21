@@ -138,6 +138,23 @@ public class Utility
     
     
     /**
+     * @Summary: Delays the program for the specified number of seconds
+     * @params: [int] seconds: number of seconds to delay
+     * @return: None
+     */
+    public static void delayInSeconds(int seconds) {
+        try {
+            Thread.sleep(seconds * 1000); 
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }//END of try-catch
+    }//END of delayInSeconds
+    
+    
+    
+    
+    
+    /**
      * @Summary: a wrapper function for printing a blank line
      * @params: None
      * @return:None

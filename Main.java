@@ -3,7 +3,7 @@
  * 
  * Program Summary: A program intended to be used as a classroom manager by a teacher for working with their marks
  * 
- * Program Element List: use of acess modifiers final and private to prevent the unintentional modification of student ID, wrapper functions, Seperate Student and Class to implement a has-a relationship, create setter and getter functions for private varaibles, Utility class with static helper functions, use of for and while loop in multiple instances for sorting/searching/input validation, try-catch exceptions, use of javas collections class with a user defined class and comparison function implementation, function overloading
+ * Program Element List: use of acess modifiers final and private to prevent the unintentional modification of student ID, wrapper functions, Seperate Student and Class to implement a has-a relationship, create setter and getter functions for private varaibles, Utility class with static helper functions, use of for and while loop in multiple instances for sorting/searching/input validation, try-catch exceptions, use of javas collections class with a user defined class and comparison function implementation, function overloading, Thread.sleep to delay the program
  *
  * @author Ellie Taghavi
  * @version January 17th, 2023
