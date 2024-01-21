@@ -25,8 +25,9 @@ public class Main
      */
     public static void main (String[] args)
     {
-         Class classOne = new Class();
-         classOne.main();
+         Class classroom = new Class();
+         new StudentManagementGUI(classroom);
+         classroom.main();
     }//END of main
 }//END of Main class
 

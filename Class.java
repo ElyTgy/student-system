@@ -5,7 +5,7 @@ import java.util.*;
 public class Class
 {
     //instance variable
-    ArrayList<Student> classList = new ArrayList<Student>();
+    public ArrayList<Student> classList = new ArrayList<Student>();
     
     
     
