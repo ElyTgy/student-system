@@ -1,17 +1,17 @@
 #BlueJ package file
-dependency1.from=Main
+dependency1.from=StudentManagementGUI
 dependency1.to=Class
 dependency1.type=UsesDependency
 dependency2.from=Main
-dependency2.to=StudentManagementGUI
+dependency2.to=Class
 dependency2.type=UsesDependency
-dependency3.from=StudentManagementGUI
-dependency3.to=Class
+dependency3.from=Main
+dependency3.to=StudentManagementGUI
 dependency3.type=UsesDependency
-editor.fx.0.height=1188
-editor.fx.0.width=1464
-editor.fx.0.x=687
-editor.fx.0.y=93
+editor.fx.0.height=0
+editor.fx.0.width=0
+editor.fx.0.x=0
+editor.fx.0.y=0
 objectbench.height=92
 objectbench.width=761
 package.divider.horizontal=0.6
