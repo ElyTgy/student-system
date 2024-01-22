@@ -25,6 +25,9 @@ public class Main
      */
     public static void main (String[] args)
     {
+        PhidgetAssn6 phidget = new PhidgetAssn6();
+        phidget.start();
+        
          Class classroom = new Class();
          new StudentManagementGUI(classroom);
          classroom.main();
